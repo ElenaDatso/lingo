@@ -40,12 +40,7 @@ function printDialogueWithDelay(dialogue) {
       const message = dialogue[index].original_text;
       const divWrap = document.createElement('div');
       divWrap.className = 'messageWrap column';
-      // const div = document.createElement('div');
-      // const icon = document.createElement('img');
-      // icon.src = src =
-      //   'https://img.icons8.com/fluency-systems-filled/48/user.png';
       divWrap.innerHTML = `<img alt="user icon" width="48" height="48" src=${'https://img.icons8.com/fluency-systems-filled/48/user.png'} /><div>${`${speaker}: ${message}`}</div>`;
-      // div.innerText = `${speaker}: ${message}`;
       progressBar.style.width = `${progress += progressChanks}%`;
       dialogRoot.appendChild(divWrap);
       index++;
