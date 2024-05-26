@@ -13,5 +13,8 @@
     "lite-server": "^2.5.4"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }

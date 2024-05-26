@@ -1,9 +1,12 @@
 :root {
   box-sizing: border-box;
 }
-body {
+
+html, body {
    font-family: 'Comfortaa', sans-serif !important;
    background-color: #f9f9f9;
+   height: 100%;
+   margin: 0;
  }
  h1 {
    letter-spacing: normal !important; 
@@ -23,6 +26,12 @@ font-family: sans-serif;
   margin-right: 6rem;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
+  max-height: 100vh;
+}
+
+.buttonWrap {
+  margin-top: auto;
 }
 
 .actionButtons {
@@ -51,9 +60,7 @@ input[type="text"]::placeholder {
  .container input {width: 100%; height: 200%;}
  .container, #progressMessage, #statistics {
    display: flex;
-   justify-content: center;
-   margin-top: 30px;
- }
+}
 
 #statistics p {line-height: 200%;}
 
@@ -104,10 +111,15 @@ textarea {
 	border-radius: 7px;
 	cursor: pointer;
 }
+
+ .dialog-wrap {
+    flex: 1 1 auto;
+    overflow: scroll;
+ }
  .dialog-wrap div {
   width: fit-content;
   margin-left: 1rem;
-  
+
  }
 
  .messageWrap {
@@ -252,7 +264,20 @@ min-height: 70vh;
  .loader::after {
    animation-delay: 1s;
  }
- 
+
+ .button-wrap {
+  margin-bottom: 10rem;
+  display: flex;
+ }
+
+ .hint-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url("https://img.icons8.com/?size=100&id=83175&format=png&color=ffffff");
+  background-repeat: no-repeat;
+  background-size: contain;
+ }
+  
  @keyframes animloader {
    0% {
      transform: scale(0);
