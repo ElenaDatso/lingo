@@ -98,9 +98,10 @@ function printDialogueWithDelay(dialogue) {
       const message = dialogue[index].original_text;
       const divWrap = document.createElement('div');
       divWrap.className = 'messageWrap column';
-      divWrap.innerHTML = `<img alt="user icon" width="48" height="48" src=${'https://img.icons8.com/fluency-systems-filled/48/user.png'} /><div id=line${index}>${`${speaker}: ${message}`}</div>`;
+      divWrap.innerHTML = `<img class="user-icon" alt="user icon" width="48" height="48" src=${'https://img.icons8.com/fluency-systems-filled/48/user.png'} /><div id=line${index}>${`${speaker}: ${message}`}</div>`;
       progressBar.style.width = `${progress += progressChanks}%`;
       dialogRoot.appendChild(divWrap);
+      dialogRoot.scrollTop = dialogRoot.scrollHeight;
       index++;
     } else {
       clearInterval(intervalId);
